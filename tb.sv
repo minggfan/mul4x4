@@ -2,6 +2,7 @@
 import uvm_pkg::*;
  
 ////////////////////////////////////////////////////////////
+
 class transaction extends uvm_sequence_item;
 `uvm_object_utils(transaction)
   
@@ -13,11 +14,7 @@ class transaction extends uvm_sequence_item;
     super.new(path);
    endfunction
   
- 
 endclass
- 
- 
- 
  
 ////////////////////////////////////////////////////////////////////////
  
@@ -29,7 +26,6 @@ class generator extends uvm_sequence#(transaction);
    function new(input string path = "generator");
     super.new(path);
    endfunction
-   
    
    virtual task body(); 
    tr = transaction::type_id::create("tr");
@@ -43,8 +39,8 @@ class generator extends uvm_sequence#(transaction);
    endtask
  
 endclass
+
 //////////////////////////////////////////////////////////////////////////////
- 
  
 class drv extends uvm_driver#(transaction);
   `uvm_component_utils(drv)
@@ -77,6 +73,7 @@ class drv extends uvm_driver#(transaction);
 endclass
  
 //////////////////////////////////////////////////////////////////////////
+
 class mon extends uvm_monitor;
 `uvm_component_utils(mon)
  
@@ -111,6 +108,7 @@ virtual mul_if mif;
 endclass
  
 /////////////////////////////////////////////////////////////////////////
+
 class sco extends uvm_scoreboard;
 `uvm_component_utils(sco)
  
@@ -151,7 +149,6 @@ endfunction
  uvm_sequencer#(transaction) seqr;
  mon m;
  
- 
 virtual function void build_phase(uvm_phase phase);
 super.build_phase(phase);
  d = drv::type_id::create("d",this);
@@ -191,8 +188,8 @@ endfunction
  
 endclass
  
- 
 //////////////////////////////////////////////////////////////////
+
 class test extends uvm_test;
 `uvm_component_utils(test)
  
@@ -218,8 +215,8 @@ phase.drop_objection(this);
 endtask
 endclass
  
- 
 ////////////////////////////////////////////////////////////////////
+
 module tb;
  
   mul_if mif();
