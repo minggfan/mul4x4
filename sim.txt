@@ -1,0 +1,21 @@
+UVM_INFO @ 0: reporter [RNTST] Running test test...
+UVM_INFO /home/mingg/digital_design_project/1800.2-2020.3.1/src/base/uvm_traversal.svh(345) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO /home/mingg/digital_design_project/1800.2-2020.3.1/src/base/uvm_report_server.svh(1009) @ 600: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  123
+UVM_WARNING :    2
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[DRV]    30
+[MON]    30
+[NO_DPI_USED]     1
+[NO_VISIT_CHECK]     1
+[RNTST]     1
+[SCO]    30
+[SEQ]    30
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+
